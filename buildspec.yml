@@ -4,8 +4,6 @@ phases:
   install:
     commands:
       # install node and npm
-      - curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
-      - apt update
       - apt install -y nodejs
       - apt install -y npm
   pre_build:
