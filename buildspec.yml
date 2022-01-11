@@ -5,8 +5,7 @@ phases:
     commands:
       # install node and npm
       - apt update
-      - apt install -y nodejs node-gyp
-      - apt install -y npm
+      - apt install -y nodejs 
   pre_build:
     commands:
       # install dependencies
