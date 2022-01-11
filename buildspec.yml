@@ -1,0 +1,30 @@
+version: 0.0
+
+phases:
+  install:
+    commands:
+      # install node and npm
+      - curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
+      - apt update
+      - apt install -y nodejs
+      - apt install -y npm
+  pre_build:
+    commands:
+      # install dependencies
+      - echo Installing Dependies
+      - npm i
+      - npm audit fix
+  build:
+    commands:
+      # start and build
+      - echo Testing..
+      - npm run test
+      - echo Building...
+      - npm run build
+
+artifacts: 
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist
+      
