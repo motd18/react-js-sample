@@ -15,8 +15,8 @@ phases:
   build:
     commands:
       # start and build
-      - echo Testing..
-      - npm run test
+      #- echo Testing..
+      #- npm run test
       - echo Building...
       - npm run build
 
